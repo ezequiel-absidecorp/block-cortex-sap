@@ -69,7 +69,7 @@ view: balance_sheet_path_to_node_pdt {
         FROM
           n
         WHERE
-          LevelNumber = 02 --hola, recuerda que esto estaba en 2
+          LevelNumber = 2
           UNION ALL
           SELECT
           n.Client,
