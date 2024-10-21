@@ -29,7 +29,7 @@ view: profit_and_loss {
     type: string
     sql: ${TABLE}.CompanyCode ;;
   }
-  dimension: company_text {
+  dimension: company_text { #h
     type: string
     sql: ${TABLE}.CompanyText ;;
   }
