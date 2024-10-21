@@ -69,7 +69,7 @@ view: profit_and_loss {
     type: string
     sql: ${TABLE}.GLFinancialItem ;;
   }
-  dimension: glhierarchy {
+  dimension: gl_hierarchy { #glhierarchy
     type: string
     sql: ${TABLE}.GLHierarchy ;;
   }
