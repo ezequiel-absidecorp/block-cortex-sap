@@ -92,7 +92,7 @@ view: balance_sheet_navigation_ext {
     hidden: yes
     type: string
     # sql: 'filter1|Display+Timeframe' ;;
-    sql: 'filter1|Fiscal+Period||filter2|Global+Currency||filter3|Hierarchy||filter4|Chart+of+Accounts||filter5|Company+Code||filter6|Ledger+Name||filter7|Top+Hierarchy+Level' ;;
+    sql: 'filter1|Fiscal+Period||filter3|Hierarchy||filter4|Chart+of+Accounts||filter5|Company+Code||filter6|Ledger+Name||filter7|Top+Hierarchy+Level' ;; #|filter2|Global+Currency| eliminado
   }
 
   parameter: navigation_focus_page {
