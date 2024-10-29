@@ -144,7 +144,7 @@ view: balance_sheet_fiscal_periods_selected_sdt {
     description: "Cumulative Amount in Global Currency for the selected Fiscal Reporting Period"
     sql: ${balance_sheet.cumulative_amount_in_local_currency} ;; #cumulative_amount_in_local_currency, antes estaba cumulative_amount_in_target_currency
     filters: [fiscal_period_group: "Reporting"]
-    value_format_name: millions_d1
+    value_format_name: units #units , antes estaba millions_d1
     html: @{negative_format} ;;
   }
 
