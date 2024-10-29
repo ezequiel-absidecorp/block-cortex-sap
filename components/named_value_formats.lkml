@@ -15,3 +15,7 @@ named_value_format: millions_d1 {
 named_value_format: millions_d1_m {
   value_format: "#,##0.00,,\"M\";-#,##0.00,,\"M\""
 }
+
+named_value_format: units {
+  value_format: "#,##0.00;-#,##0.00"
+}
