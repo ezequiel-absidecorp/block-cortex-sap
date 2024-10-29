@@ -70,7 +70,7 @@ view: language_map_sdt {
         SELECT LanguageKey_SPRAS AS Language_SPRAS,
                1 as rnk
         FROM `@{GCP_PROJECT}.@{REPORTING_DATASET}.Languages_T002`
-        WHERE TwoCharacterSapLanguageCode_LAISO = '{{locale[0]}}' --Debería ser ES
+        WHERE TwoCharacterSapLanguageCode_LAISO = 'ES' --Debería ser ES, estaba antes {{locale[0]}}
         {% if explore == 'ProfitAndLoss' or explore == 'BalanceSheet' %}
         AND LanguageKey_SPRAS IN (
             SELECT DISTINCT languageKey_SPRAS
