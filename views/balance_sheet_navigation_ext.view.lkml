@@ -115,11 +115,11 @@ view: balance_sheet_navigation_ext {
     label: "Fiscal Period"
   }
 
-  filter: filter2 {
-    hidden: yes
-    type: string
-    label: "Global Currency"
-  }
+  #filter: filter2 {
+  #  hidden: yes
+  #  type: string
+  # label: "Global Currency"
+  #}
 
   filter: filter3 {
     hidden: yes
