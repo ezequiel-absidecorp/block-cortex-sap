@@ -172,7 +172,7 @@ view: balance_sheet_fiscal_periods_selected_sdt {
     description: "Cumulative Amount in Global Currency for the selected Fiscal Comparison Period"
     sql: ${balance_sheet.cumulative_amount_in_local_currency} ;; #cumulative_amount_in_local_currency, antes estaba cumulative_amount_in_target_currency
     filters: [fiscal_period_group: "Comparison"]
-    value_format_name: millions_d1
+    value_format_name: units
     html: {% if balance_sheet.select_fiscal_period._in_query and balance_sheet.select_comparison_type._parameter_value == 'none' %}
           {% else %}@{negative_format}
           {% endif %};;
@@ -185,7 +185,7 @@ view: balance_sheet_fiscal_periods_selected_sdt {
     label: "Variance Amount"
     description: "Reporting Period Amount minus Comparison Period Amount"
     sql: ${reporting_period_amount_in_global_currency} - ${comparison_period_amount_in_global_currency} ;;
-    value_format_name: millions_d1
+    value_format_name: units
     html: @{negative_format} ;;
   }
 
