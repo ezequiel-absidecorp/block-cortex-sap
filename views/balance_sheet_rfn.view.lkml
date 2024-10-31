@@ -62,7 +62,7 @@ view: +balance_sheet {
     hidden: yes
     sql: concat(${client},${company_code}, ${chart_of_accounts}, ${hierarchy_name},
           coalesce(${business_area},'is null') ,coalesce(${ledger_in_general_ledger_accounting},'0L')
-          ,${node},${fiscal_year},${fiscal_period},${language_key_spras},${target_currency_tcurr});;
+          ,${node},${fiscal_year},${fiscal_period},${language_key_spras},${currency_key});;#target_currency_tcurr eliminado por currency_key
   }
 
 #########################################################
