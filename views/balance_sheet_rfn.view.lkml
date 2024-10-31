@@ -213,7 +213,7 @@ view: +balance_sheet {
     type: sum
     label: "Total Amount (Global Currency)"
     description: "Period Amount in Target or Global Currency"
-    sql: ${amount_in_target_currency} ;;
+    sql: ${amount_in_local_currency} ;; #amount_in_local_currency, antes estaba amount_in_target_currency
     value_format_name: units #millions_d1
   }
 
@@ -221,21 +221,21 @@ view: +balance_sheet {
     type: sum
     label: "Total Cumulative Amount (Global Currency)"
     description: "End of Period Cumulative Amount in Target or Global Currency"
-    sql: ${cumulative_amount_in_target_currency} ;;
+    sql: ${cumulative_amount_in_local_currency} ;; #cumulative_amount_in_local_currency, antes estaba cumulative_amount_in_target_currency
     value_format_name: units #millions_d1
   }
 
   measure: current_assets {
     type: sum
     description: "Current Assets are those assets that can be converted into cash/liquid funds at short notice (typically within one year), such as short-term investments and accounts receivable."
-    sql:  ${cumulative_amount_in_target_currency};;
+    sql:  ${cumulative_amount_in_local_currency};; #cumulative_amount_in_local_currency, antes cumulative_amount_in_target_currency
     filters: [node_text: "Current Assets"]
   }
 
   measure: current_liabilities {
     type: sum
     description: "Current liabilities are short-term financial obligations that are due within one year."
-    sql:  ${cumulative_amount_in_target_currency};;
+    sql:  ${cumulative_amount_in_local_currency};; #cumulative_amount_in_local_currency, antes estaba cumulative_amount_in_target_currency
     filters: [node_text: "Current Liabilities"]
   }
 
