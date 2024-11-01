@@ -259,7 +259,7 @@ view: +balance_sheet {
           <a style= "font-size:80%;color: black">{{company_list}}</a><br>
           <a style= "font-size:80%;color: black">Fiscal Period:   {{select_fiscal_period._parameter_value}}&nbsp;&nbsp;&nbsp; Current Ratio: {{current_ratio._rendered_value}}</a>
           <br>
-          <a style= "font-size: 60%; text-align:center;color: black"> Amounts in Millions  {{target_currency_tcurr}} </a>
+          <a style= "font-size: 60%; text-align:center;color: black"> Amounts in {{currency_key}} </a>
        </div>
       ;;
   }
