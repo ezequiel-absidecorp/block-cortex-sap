@@ -265,7 +265,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     sql_distinct_key: ${profit_and_loss.key} ;;
     sql: ${profit_and_loss.amount_in_target_currency} ;;
     filters: [fiscal_reporting_group: "Reporting"]
-    value_format_name: decimal_0
+    value_format_name: units #decimal_0
     html: @{negative_format} ;;
   }
 
@@ -278,7 +278,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     sql_distinct_key: ${profit_and_loss.key} ;;
     sql: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}${profit_and_loss.amount_in_target_currency}{%else%}NULL{%endif%} ;;
     filters: [fiscal_reporting_group: "Comparison"]
-    value_format_name: decimal_0
+    value_format_name: units #decimal_0
     html: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}@{negative_format}{%else%} {%endif%} ;;
   }
 
@@ -288,7 +288,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     label: "Variance Amount"
     description: "Reporting Amount - Comparison Amount"
     sql: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}${reporting_amount} - ${comparison_amount}{%else%}NULL{%endif%} ;;
-    value_format_name: decimal_0
+    value_format_name: units #decimal_0
     html: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}@{negative_format}{%else%} {%endif%} ;;
   }
 
