@@ -263,7 +263,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     label: "{% assign compare = profit_and_loss.parameter_compare_to._parameter_value %}{% if profit_and_loss.filter_fiscal_timeframe._in_query and compare == 'none'%} {% else %}Reporting Amount{% endif %}"
     description: "Amount in Global Currency for the Reporting fiscal reporting group."
     sql_distinct_key: ${profit_and_loss.key} ;;
-    sql: ${profit_and_loss.amount_in_target_currency} ;;
+    sql: ${profit_and_loss.amount_in_local_currency} ;; #${profit_and_loss.amount_in_target_currency}
     filters: [fiscal_reporting_group: "Reporting"]
     value_format_name: units #decimal_0
     html: @{negative_format} ;;
@@ -276,7 +276,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     label: "{% if profit_and_loss.filter_fiscal_timeframe._in_query%}{% assign compare = profit_and_loss.parameter_compare_to._parameter_value %}{% if compare == 'yoy' %}{%assign compare_label = 'Year Ago Amount' %}{%elsif compare == 'prior'%}{%assign compare_label = 'Prior Amount'%}{% else %}{% assign compare_label = 'None' %}{%endif%}{{compare_label}}{%else%}Comparison Amount{%endif%}"
     description: "Amount in Global Currency for the Comparison fiscal reporting group."
     sql_distinct_key: ${profit_and_loss.key} ;;
-    sql: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}${profit_and_loss.amount_in_target_currency}{%else%}NULL{%endif%} ;;
+    sql: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}${profit_and_loss.amount_in_local_currency}{%else%}NULL{%endif%} ;; #{profit_and_loss.amount_in_target_currency}
     filters: [fiscal_reporting_group: "Comparison"]
     value_format_name: units #decimal_0
     html: {% if profit_and_loss.parameter_compare_to._parameter_value != 'none' %}@{negative_format}{%else%} {%endif%} ;;
