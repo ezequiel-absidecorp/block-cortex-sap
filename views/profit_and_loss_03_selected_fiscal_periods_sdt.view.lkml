@@ -257,7 +257,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
   }
 
   measure: reporting_amount {
-    type: sum_distinct
+    type: sum #sum_distinct antes
     hidden: no
     # Label is Reporting Amount by default. If filter_fiscal_timeframe in query and parameter_compare_to = 'none' then leave label blank"
     label: "{% assign compare = profit_and_loss.parameter_compare_to._parameter_value %}{% if profit_and_loss.filter_fiscal_timeframe._in_query and compare == 'none'%} {% else %}Reporting Amount{% endif %}"
@@ -266,7 +266,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     sql: ${profit_and_loss.amount_in_local_currency} ;; #${profit_and_loss.amount_in_target_currency}
     filters: [fiscal_reporting_group: "Reporting"]
     value_format_name: units #decimal_0
-    #html: @{negative_format} ;; NUEVO
+    html: @{negative_format} ;;
   }
 
   measure: comparison_amount {
