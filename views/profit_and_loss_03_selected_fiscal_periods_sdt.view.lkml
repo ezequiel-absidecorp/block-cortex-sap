@@ -266,7 +266,7 @@ view: profit_and_loss_03_selected_fiscal_periods_sdt {
     sql: ${profit_and_loss.amount_in_local_currency} ;; #${profit_and_loss.amount_in_target_currency}
     filters: [fiscal_reporting_group: "Reporting"]
     value_format_name: units #decimal_0
-    html: @{negative_format} ;;
+    #html: @{negative_format} ;; NUEVO
   }
 
   measure: comparison_amount {
