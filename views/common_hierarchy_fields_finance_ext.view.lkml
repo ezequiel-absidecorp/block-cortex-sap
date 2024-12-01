@@ -45,6 +45,15 @@ view: common_hierarchy_fields_finance_ext {
     default_value: "3"
   }
 
+  dimension: accounts_starting_with_4 { #NUEVA DIMENSION
+    type: string
+    sql: CASE
+          WHEN ${TABLE}.glnode LIKE '4%' THEN ${TABLE}.glnode
+          ELSE NULL
+       END ;;
+    description: "Muestra solo las cuentas (glnode) que comienzan con 4"
+  }
+
   dimension: node_text_path_string {
     hidden: no
     type: string
