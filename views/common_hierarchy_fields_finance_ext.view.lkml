@@ -46,7 +46,9 @@ view: common_hierarchy_fields_finance_ext {
   }
 
   dimension: accounts_starting_with_4 { #NUEVA DIMENSION
+    hidden: no
     type: string
+    label: "Node 4"
     sql: CASE
           WHEN ${TABLE}.glnode LIKE '4%' THEN ${TABLE}.glnode
           ELSE NULL
