@@ -81,7 +81,8 @@ view: +profit_and_loss {
     type: string
     label: "Fiscal Year Filter"
     description: "Permite filtrar los datos por un año fiscal específico."
-    allowed_value: { value: "" label: "" }
+    allowed_value: { value: "2023" label: "2023" }
+    allowed_value: { value: "2024" label: "2024" }
     # Agrega más años según sea necesario
   }
 
