@@ -48,7 +48,7 @@ view: common_hierarchy_fields_finance_ext {
   dimension: accounts_starting_with_410510 {
     hidden: no
     type: string
-    label: "Node CD"
+    label: "Cuentas de Ingresos"
     sql: CASE
           WHEN ${TABLE}.glnode LIKE '410510%' AND ${TABLE}.hier1_node_text is not null THEN ${TABLE}.hier1_node_text
        END ;;
