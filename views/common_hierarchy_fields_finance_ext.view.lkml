@@ -50,7 +50,7 @@ view: common_hierarchy_fields_finance_ext {
     type: string
     label: "Node CD"
     sql: CASE
-          WHEN ${TABLE}.glnode LIKE '410510%' AND ${TABLE}.hier1_node_text not null THEN ${TABLE}.hier1_node_text
+          WHEN ${TABLE}.glnode LIKE '410510%' AND ${TABLE}.hier1_node_text is not null THEN ${TABLE}.hier1_node_text
        END ;;
     description: "Muestra el campo hier1_node_text si glnode comienza con '410510' y no es nulo"
   }
