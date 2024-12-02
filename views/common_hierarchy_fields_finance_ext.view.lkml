@@ -58,7 +58,7 @@ view: common_hierarchy_fields_finance_ext {
 
   filter: exclude_nulls {
     type: yesno
-    sql: ${Node CD} IS NOT NULL ;;
+    sql: ${TABLE}.hier1_node_text IS NOT NULL ;;
   }
 
   dimension: node_text_path_string {
