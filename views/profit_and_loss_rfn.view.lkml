@@ -76,6 +76,21 @@ view: +profit_and_loss {
 #
 #########################################################
 
+  parameter: filter_fiscal_year {
+    hidden: no
+    type: string
+    label: "Fiscal Year Filter"
+    description: "Permite filtrar los datos por un año fiscal específico."
+    allowed_value: { value: "" label: "" }
+    # Agrega más años según sea necesario
+  }
+
+  filter: fiscal_year_filter {
+    type: string
+    sql: ${TABLE}.fiscalyear = {% parameter filter_fiscal_year %} ;;
+    description: "Filtra los datos por el año fiscal seleccionado."
+  }
+
   parameter: parameter_display_time_dimension {
     type: unquoted
     view_label: "🔍 Filters & 🛠 Tools"
