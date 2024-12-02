@@ -88,7 +88,8 @@ view: +profit_and_loss {
 
   filter: fiscal_year_filter {
     type: string
-    sql: ${TABLE}.fiscalyear = {% parameter filter_fiscal_year %} ;;
+    view_label: "🔍 Filters & 🛠 Tools"
+    sql: ${TABLE}.fiscal_year = {% parameter filter_fiscal_year %} ;;
     description: "Filtra los datos por el año fiscal seleccionado."
   }
 
