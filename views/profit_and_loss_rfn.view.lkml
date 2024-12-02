@@ -243,6 +243,18 @@ view: +profit_and_loss {
       ${TABLE}.AmountInLocalCurrency * {{multiplier}} ;;
   }
 
+  dimension: amount_in_usd {
+    hidden: yes
+    sql: @{sign_change_multiplier}
+      ${TABLE}.AmountInUSD * {{multiplier}} ;;
+  }
+
+  dimension: cumulative_amount_in_usd {
+    hidden: yes
+    sql: @{sign_change_multiplier}
+      ${TABLE}.CumulativeAmountInUSD * {{multiplier}} ;;
+  }
+
   # based on value in CONSTANTs sign_change_multiplier flip the signs so Income is positive and Expenses negative
   dimension: amount_in_target_currency {
     hidden: yes
