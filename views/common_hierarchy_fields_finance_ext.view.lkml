@@ -45,15 +45,15 @@ view: common_hierarchy_fields_finance_ext {
     default_value: "3"
   }
 
-  dimension: accounts_starting_with_4 {
+  dimension: accounts_starting_with_410510 {
     hidden: no
     type: string
-    label: "Node 4"
+    label: "Node 410510"
     sql: CASE
-          WHEN ${TABLE}.glnode LIKE '4%' AND ${TABLE}.glnode IS NOT NULL THEN ${TABLE}.hier1_node_text
+          WHEN ${TABLE}.glnode LIKE '410510%' AND ${TABLE}.glnode IS NOT NULL THEN ${TABLE}.hier1_node_text
           ELSE NULL
        END ;;
-    description: "Muestra el campo hier1_node_text si glnode comienza con '4' y no es nulo"
+    description: "Muestra el campo hier1_node_text si glnode comienza con '410510' y no es nulo"
   }
 
   dimension: node_text_path_string {
