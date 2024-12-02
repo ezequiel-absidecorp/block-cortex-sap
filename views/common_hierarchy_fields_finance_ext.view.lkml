@@ -58,7 +58,7 @@ view: common_hierarchy_fields_finance_ext {
 
   filter: exclude_nulls {
     type: yesno
-    sql: ${accounts_starting_with_410510} IS NOT NULL ;;
+    sql: ${Node CD} IS NOT NULL ;;
   }
 
   dimension: node_text_path_string {
