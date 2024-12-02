@@ -97,8 +97,8 @@ view: +profit_and_loss {
     type: unquoted
     view_label: "🔍 Filters & 🛠 Tools"
     label: "Display Year, Quarter or Period"
-    allowed_value: {label: "Fiscal Period" value: "fp"}
-    allowed_value: {label: "Quarter" value: "qtr"}
+    #allowed_value: {label: "Fiscal Period" value: "fp"}
+    #allowed_value: {label: "Quarter" value: "qtr"}
     allowed_value: {label: "Year" value: "yr"}
     default_value: "yr" #qtr
   }
